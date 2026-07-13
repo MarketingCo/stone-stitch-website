@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2, Shield, Wrench, HardHat, PoundSterling, Clock } from "lucide-react";
 
@@ -23,12 +23,12 @@ export default function Home() {
               Don't replace failing stone. Reinforce it. We provide permanent, cost-effective structural repairs using Helibar technology and advanced rope access—no scaffolding required.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button asChild size="lg" className="bg-orange-600 hover:bg-orange-700 text-white text-base">
-                <Link href="/contact">Get a Free Quote</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="text-white border-white hover:bg-white/10 hover:text-white text-base bg-transparent">
-                <Link href="/services">View Our Services</Link>
-              </Button>
+              <Link href="/contact" className={buttonVariants({ size: "lg", className: "bg-orange-600 hover:bg-orange-700 text-white text-base" })}>
+                Get a Free Quote
+              </Link>
+              <Link href="/services" className={buttonVariants({ variant: "outline", size: "lg", className: "text-white border-white hover:bg-white/10 hover:text-white text-base bg-transparent" })}>
+                View Our Services
+              </Link>
             </div>
             <div className="flex items-center space-x-6 pt-6 text-sm text-slate-400">
               <div className="flex items-center">
@@ -100,9 +100,9 @@ export default function Home() {
               <h2 className="text-3xl font-bold tracking-tight mb-4 text-slate-900">Our Core Services</h2>
               <p className="text-slate-600 text-lg">Specialist masonry repair solutions tailored for Scotland's traditional and modern buildings.</p>
             </div>
-            <Button asChild variant="outline" className="mt-6 md:mt-0">
-              <Link href="/services">View All Services</Link>
-            </Button>
+            <Link href="/services" className={buttonVariants({ variant: "outline", className: "mt-6 md:mt-0" })}>
+              View All Services
+            </Link>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -147,12 +147,12 @@ export default function Home() {
             Send us photos of your cracked or failing stonework. Our experts will review them and provide a free, no-obligation estimate.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button asChild size="lg" className="bg-orange-600 hover:bg-orange-700 text-white">
-              <Link href="/contact">Contact Us Today</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white/10 hover:text-white">
-              <Link href="tel:01315550000">Call 0131 555 0000</Link>
-            </Button>
+            <Link href="/contact" className={buttonVariants({ size: "lg", className: "bg-orange-600 hover:bg-orange-700 text-white" })}>
+              Contact Us Today
+            </Link>
+            <Link href="tel:01315550000" className={buttonVariants({ size: "lg", variant: "outline", className: "bg-transparent text-white border-white hover:bg-white/10 hover:text-white" })}>
+              Call 0131 555 0000
+            </Link>
           </div>
         </div>
       </section>

@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Phone, Mail, MapPin } from "lucide-react";
+import Link from "next/link";
 
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -90,9 +91,9 @@ export default function Contact() {
               <p className="text-slate-300 mb-6">
                 For a faster estimate, you can email us photos of the cracking or stone damage directly.
               </p>
-              <Button asChild variant="outline" className="text-slate-900 border-white bg-white hover:bg-slate-100">
-                <a href="mailto:info@stone-stitch.co.uk">Email Photos</a>
-              </Button>
+              <Link href="mailto:info@stone-stitch.co.uk" className={buttonVariants({ variant: "outline", className: "text-slate-900 border-white bg-white hover:bg-slate-100" })}>
+                Email Photos
+              </Link>
             </div>
           </div>
 

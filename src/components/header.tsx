@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
 import { HardHat, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "./ui/sheet";
 
@@ -30,20 +30,20 @@ export function Header() {
         </nav>
         
         <div className="hidden md:flex">
-          <Button asChild className="bg-orange-600 hover:bg-orange-700 text-white">
-            <Link href="/contact">Get a Free Quote</Link>
-          </Button>
+          <Link href="/contact" className={buttonVariants({ className: "bg-orange-600 hover:bg-orange-700 text-white" })}>
+            Get a Free Quote
+          </Link>
         </div>
 
         {/* Mobile Nav */}
         <div className="md:hidden">
           <Sheet>
-            <SheetTrigger asChild>
+            <SheetTrigger render={
               <Button variant="ghost" size="icon" className="md:hidden">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle Menu</span>
               </Button>
-            </SheetTrigger>
+            } />
             <SheetContent side="right">
               <SheetTitle>Navigation Menu</SheetTitle>
               <div className="flex flex-col space-y-4 mt-6">
@@ -53,9 +53,9 @@ export function Header() {
                   </Link>
                 ))}
                 <div className="pt-4 border-t">
-                  <Button asChild className="w-full bg-orange-600 hover:bg-orange-700 text-white">
-                    <Link href="/contact">Get a Free Quote</Link>
-                  </Button>
+                  <Link href="/contact" className={buttonVariants({ className: "w-full bg-orange-600 hover:bg-orange-700 text-white" })}>
+                    Get a Free Quote
+                  </Link>
                 </div>
               </div>
             </SheetContent>

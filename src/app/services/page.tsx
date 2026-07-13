@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2, Shield, Wrench, HardHat, Link as LinkIcon, Building2 } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 
 export default function Services() {
   const services = [
@@ -70,9 +70,9 @@ export default function Services() {
           <p className="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">
             Our experts can assess your property's cracking or stone damage and recommend the most cost-effective structural repair.
           </p>
-          <Button asChild size="lg" className="bg-orange-600 hover:bg-orange-700 text-white">
-            <Link href="/contact">Book a Free Survey</Link>
-          </Button>
+          <Link href="/contact" className={buttonVariants({ size: "lg", className: "bg-orange-600 hover:bg-orange-700 text-white" })}>
+            Book a Free Survey
+          </Link>
         </div>
       </div>
     </div>
