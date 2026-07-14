@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { HardHat, Phone, Mail, MapPin } from "lucide-react";
+import { areas } from "@/lib/areas-data";
 
 export function Footer() {
   return (
@@ -57,8 +58,20 @@ export function Footer() {
             </ul>
           </div>
         </div>
+
+        {/* Areas We Cover */}
+        <div className="border-t border-slate-800 mt-12 pt-8">
+          <h3 className="text-white font-semibold mb-4 text-xs tracking-wider uppercase">Areas We Cover</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 text-xs">
+            {Object.values(areas).map((area) => (
+              <Link key={area.slug} href={`/areas/${area.slug}`} className="hover:text-orange-500 transition-colors">
+                {area.name}
+              </Link>
+            ))}
+          </div>
+        </div>
         
-        <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+        <div className="border-t border-slate-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
           <p>&copy; {new Date().getFullYear()} Stone-Stitch. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>

@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Stone-Stitch | Structural Stone Repairs & Helibar Reinforcement",
@@ -33,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} min-h-screen flex flex-col bg-slate-50 text-slate-900`}>
+      <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans antialiased">
         <Header />
         <main className="flex-grow">
           {children}
