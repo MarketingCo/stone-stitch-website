@@ -69,21 +69,21 @@ export default async function AreaPage({ params }: PageProps) {
     }
   };
 
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Helibar Repair & Structural Stone Stitching",
-    "serviceType": "Structural Masonry Repair",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": `Stone-Stitch ${area.name}`,
-      "telephone": "01315550000"
-    },
-    "areaServed": {
-      "@type": "AdministrativeArea",
-      "name": area.name
-    },
-    "description": area.description
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Structural Masonry Repair Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Helibar Repair & Structural Stone Stitching",
+            "serviceType": "Structural Masonry Repair",
+            "description": area.description
+          }
+        }
+      ]
+    }
   };
 
   return (
@@ -92,10 +92,6 @@ export default async function AreaPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
 
       <div className="flex flex-col min-h-screen">
