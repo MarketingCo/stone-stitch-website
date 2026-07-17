@@ -23,10 +23,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: area.title,
     description: area.description,
+    alternates: {
+      canonical: `https://www.stone-stitch.co.uk/areas/${slug}`,
+    },
     openGraph: {
       title: area.title,
       description: area.description,
-      url: `https://stone-stitch.co.uk/areas/${slug}`,
     },
   };
 }
@@ -59,16 +61,14 @@ export default async function AreaPage({ params }: PageProps) {
       "latitude": area.lat,
       "longitude": area.lng
     },
-    "url": `https://stone-stitch.co.uk/areas/${slug}`,
+    "url": `https://www.stone-stitch.co.uk/areas/${slug}`,
     "priceRange": "$$",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       "opens": "08:00",
       "closes": "18:00"
-    }
-  };
-
+    },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Structural Masonry Repair Services",

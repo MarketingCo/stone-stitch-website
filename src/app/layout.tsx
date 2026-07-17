@@ -6,11 +6,8 @@ import { Footer } from "@/components/footer";
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.stone-stitch.co.uk'),
   title: "Stone-Stitch | Structural Stone Repairs & Helibar Reinforcement",
-  description: "Expert structural masonry repairs, helibar reinforcement, and rope access stonework in Edinburgh and Central Scotland. Fast, cost-effective, and fully insured.",
+  description: "Expert structural masonry repairs, helibar reinforcement, and rope access stonework in Edinburgh & Central Scotland. Fast, cost-effective, and fully insured.",
   openGraph: {
-    title: "Stone-Stitch | Structural Stone Repairs & Helibar Reinforcement",
-    description: "Expert structural masonry repairs, helibar reinforcement, and rope access stonework in Edinburgh and Central Scotland.",
-    url: "https://stone-stitch.co.uk",
     siteName: "Stone-Stitch",
     images: [
       {

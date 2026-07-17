@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { areas } from "@/lib/areas-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://stone-stitch.co.uk";
+  const baseUrl = "https://www.stone-stitch.co.uk";
 
   // Core pages
   const routes = ["", "/services", "/projects", "/about", "/contact"].map(

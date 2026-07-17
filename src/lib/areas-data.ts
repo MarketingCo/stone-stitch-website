@@ -56,7 +56,7 @@ export const areas: Record<string, AreaData> = {
     slug: "stockbridge-trinity",
     name: "Stockbridge & Trinity",
     title: "Stonework Repairs Stockbridge & Trinity | Helibar reinforcement",
-    description: "Abseil stone repairs and Helibar crack stitching in Stockbridge and Trinity. Expert solutions for traditional stone cottages, tenements and sea-facing properties.",
+    description: "Abseil stone repairs and Helibar crack stitching in Stockbridge and Trinity. Expert solutions for traditional stone cottages and tenements.",
     heading: "Masonry & Helibar Repair in Stockbridge & Trinity",
     subheading: "Structural Stabilization for Historic Edinburgh Townhouses & Villas",
     intro: "Stockbridge's bohemian colony houses and Trinity's elegant coastal villas are heavily exposed to Scotland's damp, maritime climate. Moisture-induced mortar washout and high-level architectural shifting are common structural challenges for these beautiful, traditional stone buildings.",

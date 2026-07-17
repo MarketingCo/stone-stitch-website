@@ -3,6 +3,15 @@ import { CheckCircle2, Shield, Wrench, HardHat, Link as LinkIcon, Building2 } fr
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Services | Helibar & Stone Stitching",
+  alternates: {
+    canonical: "https://www.stone-stitch.co.uk/services",
+  },
+};
+
 export default function Services() {
   const services = [
     {

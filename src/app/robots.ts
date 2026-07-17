@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://stone-stitch.co.uk/sitemap.xml",
+    sitemap: "https://www.stone-stitch.co.uk/sitemap.xml",
   };
 }

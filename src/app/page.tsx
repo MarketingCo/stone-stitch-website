@@ -3,6 +3,14 @@ import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2, Shield, Wrench, HardHat, PoundSterling, Clock } from "lucide-react";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.stone-stitch.co.uk",
+  },
+};
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">

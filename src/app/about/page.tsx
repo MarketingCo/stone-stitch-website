@@ -1,5 +1,14 @@
 import { Shield, Clock, HardHat, Award } from "lucide-react";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us | Stone-Stitch",
+  alternates: {
+    canonical: "https://www.stone-stitch.co.uk/about",
+  },
+};
+
 export default function About() {
   return (
     <div className="py-16 md:py-24">

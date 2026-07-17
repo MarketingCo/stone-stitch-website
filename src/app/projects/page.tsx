@@ -1,30 +1,42 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Case Studies | Stone-Stitch",
+  alternates: {
+    canonical: "https://www.stone-stitch.co.uk/projects",
+  },
+};
+
 export default function Projects() {
   const projects = [
     {
       title: "Helibar Crack Stitching",
       location: "New Town, Edinburgh",
-      img: "https://images.unsplash.com/photo-1541888052445-fa0bc3338bf3?auto=format&fit=crop&q=80&w=800",
+      img: "https://images.unsplash.com/photo-1590496794008-383c8070b257?auto=format&fit=crop&q=80&w=800",
       desc: "Extensive cracking repaired using Helibar technology, completely concealed within the mortar beds."
     },
     {
-      title: "Rope Access Lintel Repair",
-      location: "Leith, Edinburgh",
-      img: "https://images.unsplash.com/photo-1504307651254-35680f356fce?auto=format&fit=crop&q=80&w=800",
-      desc: "Failed stone lintel reinforced via rope access, saving the client £4,000 in scaffolding costs."
+      title: "Commercial Façade Restoration",
+      category: "Stone Stitching",
+      location: "Glasgow City Centre",
+      img: "https://images.unsplash.com/photo-1590496794008-383c8070b257?auto=format&fit=crop&q=80&w=800",
+      desc: "Comprehensive crack stitching and stone pinning on a Victorian commercial property."
     },
     {
-      title: "Stone Pinning & Consolidation",
+      title: "High-Level Chimney Repair",
+      category: "Rope Access",
+      location: "Stockbridge, Edinburgh",
+      img: "https://images.unsplash.com/photo-1590496794008-383c8070b257?auto=format&fit=crop&q=80&w=800",
+      desc: "Scaffold-free removal of loose masonry and repointing of a dangerous chimney stack."
+    },
+    {
+      title: "Archway Stabilization",
+      category: "Structural Support",
       location: "Stirling",
-      img: "https://images.unsplash.com/photo-1498677231914-50deb6ba4217?auto=format&fit=crop&q=80&w=800",
-      desc: "Loose high-level masonry pinned securely back to the substrate to prevent falling hazards."
-    },
-    {
-      title: "Structural Arch Tie",
-      location: "Glasgow",
-      img: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&q=80&w=800",
+      img: "https://images.unsplash.com/photo-1590496794008-383c8070b257?auto=format&fit=crop&q=80&w=800",
       desc: "Failing archway stabilized using internal stainless steel ties, preserving the historical aesthetic."
     }
   ];
